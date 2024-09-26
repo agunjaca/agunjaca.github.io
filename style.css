@@ -1,0 +1,278 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: #fffeef;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  padding: 10px 40px;
+  letter-spacing: 3px;
+}
+
+.dotgothic16-regular {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.column-grid-2 {
+  width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 4rem 4rem;
+}
+
+.back-button {
+  width: 75%;
+  padding: 1rem 4rem;
+  text-decoration: none;
+  color: white;
+}
+
+.reset-link {
+  text-decoration: none;
+  color: white;
+}
+
+.reset-link-black {
+  text-decoration: none;
+  color: black;
+}
+
+.background-black {
+  background-color: #000;
+  color: white;
+}
+.experience {
+  padding-top: 4px;
+  margin-left: 2rem;
+}
+
+.about-me-text-grid {
+  font-size: 18px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 10px;
+  padding: 0 4rem;
+}
+
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.column-grid-projects {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem 4rem;
+}
+
+.projects-text-grid {
+  font-size: 18px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding: 0 1rem;
+}
+
+.tommy-project-grid {
+  font-size: 18px;
+  display: flex;
+  /* height: 100%; */
+  height: 70%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding: 0 1rem;
+}
+
+.blue {
+  color: #0066ff;
+}
+
+.red {
+  color: #ed1f23;
+}
+
+.green {
+  color: #61ed1f;
+}
+
+.custom-position-1 {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-position-2 {
+  position: absolute;
+  top: 70%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-position-3 {
+  position: absolute;
+  top: 80%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-position-4 {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-position-5 {
+  position: absolute;
+  top: 30%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-position-6 {
+  position: absolute;
+  top: 75%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.center-folder {
+  margin-left: 30px;
+  cursor: grab;
+}
+
+.coming-soon {
+  margin-left: 25px;
+  border: 1px solid black;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.tooltip:after {
+  opacity: 0;
+}
+
+.tooltip:hover:after {
+  content: "Coming soon!";
+  opacity: 1;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 2px 6px;
+  /* Position the tooltip */
+  position: absolute;
+  top: -35%;
+  left: 160%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
