@@ -63,6 +63,7 @@ h6 {
 
 body {
   background-color: #fffeef;
+  font-size: 18px;
 }
 
 .header {
@@ -239,7 +240,6 @@ body {
 
 .center-folder {
   margin-left: 30px;
-  cursor: grab;
 }
 
 .coming-soon {
@@ -271,4 +271,35 @@ body {
   left: 160%;
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+
+.about-me-left {
+  width: 328px;
+}
+
+@media (max-width: 768px) {
+  .column-grid-projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; /* Ensures two rows */
+  }
+
+  .left-column {
+    margin-top: 20px;
+    order: 2; /* Move the left column to the bottom */
+  }
+
+  .right-column {
+    order: 1; /* Keep the right column on top */
+  }
+
+  .column-grid-about-me {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; /* Ensures two rows */
+  }
+
+  .about-me-left {
+    order: 2;
+    width: 100%;
+    padding-left: 4rem;
+  }
 }
