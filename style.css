@@ -257,12 +257,13 @@ body {
 }
 
 .about-me-left {
-  width: 328px;
+  width: auto;
 }
 
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
+    word-wrap: break-word;
   }
 
   .column-grid-projects {
@@ -289,6 +290,7 @@ body {
   .column-grid-about-me {
     width: 100%;
     max-width: 100vw;
+    padding: auto 1rem;
     grid-template-columns: 1fr;
     grid-template-rows: auto; /* Ensures two rows */
   }
